@@ -1,0 +1,50 @@
+	*{margin: 0;padding: 0;}
+
+		/*图片轮播*/
+		.box1{width: 560px;height: 300px;overflow: hidden;border:2px dashed blue;margin: 100px;}
+		.box1 ul{
+			list-style: none;float: left;width: 2800px;height: 300px;
+			animation:ulmove 18s infinite linear;
+    		-webkit-animation:ulmove 18s infinite linear;
+		}
+		.box1 ul:hover {animation-play-state:paused;}
+		.box1 a:hover:after{display: block;}
+		.box1 a,img{display: block;height: 100%;position: relative;}
+		.box1 li{float: left;cursor: pointer;}	
+		.box1 a:after{content:"别说话!点我！";position: absolute;display: none;left: 0;top: 0;width: 560px;height: 300px;color: red;text-align:center;font-size: 40px;line-height: 300px;}	  	
+		@keyframes ulmove{
+			12%{ transform:translateX(0);}
+
+			15%{ transform:translateX(-20%);}
+			34%{ transform:translateX(-20%);}
+
+			37%{ transform:translateX(-40%);}
+			56%{ transform:translateX(-40%);}
+
+			59%{ transform:translateX(-60%);}
+			78%{ transform:translateX(-60%);}
+
+			81%{ transform:translateX(-80%);}
+			100%{ transform:translateX(-80%);}
+		} 
+
+
+
+
+		/*文字滚动*/  
+		.box2{width: 160px;background-color: red;margin: 100px auto;height:160px;overflow:hidden;text-align: center;border:1px dashed rgb(64,142,240);}
+		.box2 li{height: 20px;}
+		.box2 ul{
+			list-style: none;
+			animation:ctLi_ul 5s infinite linear;
+    		-webkit-animation:ctLi_ul 5s infinite linear;
+		}
+		.box2 ul a{ color: white;}
+		@keyframes ctLi_ul{
+			100%{
+		    	transform:translateY(-160px);
+		    }
+		}
+		.box2 ul:hover {animation-play-state:paused;background-color: green;}
+		.box2 ul:hover a{ color: red;}
+		.box2 ul a:hover{ color: rgb(153,153,153)}
